@@ -27,7 +27,7 @@ jobs:
       - android/create-avd:
           avd-name: myavd
           install: true
-          system-image: system-images;android-32;default;x86
+          system-image: system-images;android-29;default;x86_64
       - run:
           name: chmod permissions
           command: chmod +x ./gradlew
