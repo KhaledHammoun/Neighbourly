@@ -13,8 +13,8 @@ Let’s help each other, let’s help the world, and let’s live a healthier li
 Neghbourly, because we do care!
 
 ## App Requirements
-- [ ] As a user, I want to e able to see all tha listed products, so that can find what I need.
-- [ ] As a user, I want to e able to login to tha app, so that can start selling and buying.
+- [ ] As a user, I want to be able to see all tha listed products, so that can find what I need.
+- [ ] As a user, I want to be able to login to tha app, so that can start selling and buying.
 - [ ] As a user, I want to be able to add item for sale, so that other app users can start buying.
 - [ ] As a user, I want to be able to add products to a shopping cart, so that I group my items to an order.
 - [ ] As a user, I want to be able to place an order, so that I reserve the products.
