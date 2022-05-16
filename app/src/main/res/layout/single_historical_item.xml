@@ -93,7 +93,7 @@
                 android:layout_height="match_parent"
                 android:padding="@dimen/_5sdp"
                 android:textAlignment="viewStart"
-                android:text="@string/delivered1"
+                android:text="@string/delivered"
                 android:textStyle="bold" />
 
         </androidx.cardview.widget.CardView>
