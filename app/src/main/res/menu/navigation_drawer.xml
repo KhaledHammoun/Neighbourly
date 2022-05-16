@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@+id/data">
+        <item
+            android:id="@+id/navMain"
+            android:icon="@drawable/selector_home"
+            android:fontFamily="@font/open_sans"
+            android:title="@string/title_home" />
+        <item
+            android:id="@+id/shoppingCart"
+            android:icon="@drawable/selector_cart"
+            android:fontFamily="@font/open_sans"
+            android:title="@string/title_cart" />
+        <item
+            android:id="@+id/historicalOrders"
+            android:icon="@drawable/selector_order_history"
+            android:fontFamily="@font/open_sans"
+            android:title="@string/your_orders" />
+
+
+    </group>
+    <group android:id="@+id/other">
+
+        <item
+            android:id="@+id/settings"
+            android:icon="@drawable/selector_settings"
+            android:fontFamily="@font/open_sans"
+            android:title="@string/permission_settings" />
+        <item
+            android:id="@+id/nav_aboutUs"
+            android:icon="@drawable/selector_about"
+            android:fontFamily="@font/open_sans"
+            android:title="@string/about" />
+        <item
+            android:id="@+id/logout"
+            android:icon="@drawable/ic_logout"
+            android:fontFamily="@font/open_sans"
+            android:title="@string/logout" />
+    </group>
+</menu>
