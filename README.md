@@ -18,6 +18,5 @@ Neghbourly, because we do care!
 - [x] As a user, I want to be able to add item for sale, so that other app users can start buying.
 - [x] As a user, I want to be able to add products to a shopping cart, so that I group my items to an order.
 - [x] As a user, I want to be able to place an order, so that I reserve the products.
-- [ ] As a user, I want to be able to search through products based on the product name, so that as a result I get the right item.
-- [ ] As a user, I want to be able to search through products based on their categories, so that I see only the products I am interested in.
+- [x] As a user, I want to be able to search through products based on the product name, so that as a result I get the right item.
 - [x] As a user, I want to be able to see a history of my orders, so that I habe an overview of how ofter I shop through the app.
