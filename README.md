@@ -20,4 +20,4 @@ Neghbourly, because we do care!
 - [x] As a user, I want to be able to place an order, so that I reserve the products.
 - [ ] As a user, I want to be able to search through products based on the product name, so that as a result I get the right item.
 - [ ] As a user, I want to be able to search through products based on their categories, so that I see only the products I am interested in.
-- [ ] As a user, I want to be able to see a history of my orders, so that I habe an overview of how ofter I shop through the app.
+- [x] As a user, I want to be able to see a history of my orders, so that I habe an overview of how ofter I shop through the app.
