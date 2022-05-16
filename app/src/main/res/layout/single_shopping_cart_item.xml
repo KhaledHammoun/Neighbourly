@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/_lytMain"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/card_shadow"
+    android:padding="@dimen/_5sdp">
+
+    <TextView
+        android:id="@+id/_tvStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="2dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="@string/sold_out"
+        android:textAlignment="viewStart"
+        android:textColor="@color/red"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/_imgProduct"
+        android:layout_width="@dimen/_55sdp"
+        android:layout_height="@dimen/_55sdp"
+        android:layout_below="@+id/_tvStatus"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp" />
+
+    <TextView
+        android:id="@+id/_tvProductName"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_15sdp"
+        android:layout_below="@+id/_tvStatus"
+        android:layout_toEndOf="@+id/_imgProduct" />
+
+    <LinearLayout
+        android:id="@+id/_lytPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/_tvProductName"
+        android:layout_marginBottom="2dp"
+        android:layout_toEndOf="@+id/_imgProduct"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/_tvPrice"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_margin="2dp" />
+
+        <TextView
+            android:id="@+id/shopping_cart_currency"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_margin="2dp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/_imgProduct"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/_btnMinusQty"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_weight="0"
+            android:contentDescription="@string/app_name"
+            android:padding="5dp"
+            app:srcCompat="@drawable/ic_remove"
+            tools:ignore="DuplicateSpeakableTextCheck,ImageContrastCheck,TouchTargetSizeCheck" />
+
+        <TextView
+            android:id="@+id/_tvQuantity"
+            android:layout_width="@dimen/_7sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center" />
+
+        <ImageButton
+            android:id="@+id/_btnAddQty"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_weight="0"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/app_name"
+            android:padding="5dp"
+            app:srcCompat="@drawable/ic_add"
+            tools:ignore="DuplicateSpeakableTextCheck,ImageContrastCheck,TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/_tvDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_weight="3"
+            android:focusable="true"
+            android:text="@string/delete" />
+
+        <TextView
+            android:id="@+id/_tvTotalPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_weight="3"
+            android:focusable="true"
+            android:textFontWeight="700"
+            android:textSize="15sp"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/_7sdp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
