@@ -12,6 +12,9 @@ Let’s help each other, let’s help the world, and let’s live a healthier li
 
 Neghbourly, because we do care!
 
+## Video presentation of the App
+[Neighbourly](https://youtu.be/cTrvHRT6mP8)
+
 ## App Requirements
 - [x] As a user, I want to be able to see all tha listed products, so that can find what I need.
 - [x] As a user, I want to be able to login to tha app, so that can start selling and buying.
