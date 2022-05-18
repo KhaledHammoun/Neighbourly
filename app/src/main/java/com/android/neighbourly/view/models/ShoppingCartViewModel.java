@@ -32,7 +32,7 @@ public class ShoppingCartViewModel extends AndroidViewModel {
     private Observer<List<CartItem>> observerOrderLines;
     private Observer<List<Product>> observerProducts;
     private List<Product> products;
-    private Map<String, OrderLine> orderLines;
+    private List<OrderLine> orderLines;
     private Order order;
 
     public ShoppingCartViewModel(@NonNull Application application) {
@@ -44,7 +44,7 @@ public class ShoppingCartViewModel extends AndroidViewModel {
         allProducts = productRepository.getProducts();
 
         products = new ArrayList<>();
-        orderLines = new HashMap<>();
+        orderLines = new ArrayList<>();
         order = new Order();
     }
 
@@ -59,7 +59,7 @@ public class ShoppingCartViewModel extends AndroidViewModel {
                 Product product = products.stream().filter(p -> p.getId().equals(productId)).findFirst().orElse(null);
                 if (product != null) {
                     OrderLine orderLine = new OrderLine(product.getPrice(), productId, ci.getQuantity());
-                    orderLines.put(String.valueOf(ci.getId()), orderLine);
+                    orderLines.add(orderLine);
                 }
             }
 

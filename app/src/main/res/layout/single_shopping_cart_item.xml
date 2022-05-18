@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/card_shadow"
-    android:padding="@dimen/_5sdp">
+    android:padding="@dimen/_5sdp"
+    android:layout_marginVertical="@dimen/_2sdp">
 
     <TextView
         android:id="@+id/_tvStatus"

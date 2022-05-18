@@ -25,10 +25,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.android.neighbourly.R;
 import com.android.neighbourly.model.classes.Product;
 import com.android.neighbourly.view.models.AddProductViewModel;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.io.IOException;
 
@@ -37,7 +39,7 @@ public class AddProductFragment extends Fragment {
 
     private NavController navController;
     private ImageView imageView;
-    private Button uploadButton;
+    private FloatingActionButton uploadButton;
     private AddProductViewModel viewModel;
     private Uri imageUri;
     private EditText productName;
@@ -77,16 +79,18 @@ public class AddProductFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         initViews(view);
-        viewModel = new ViewModelProvider(this).get(AddProductViewModel.class);
+        setupView();
+    }
+
+    private void setupView() {
         uploadButton.setOnClickListener((v) -> {
             SelectImage();
         });
 
         saveProduct.setOnClickListener(view1 -> {
             addProduct();
-            navController.navigate(R.id.navMain);
+            Toast.makeText(getActivity(), "Product successfully added :)", Toast.LENGTH_SHORT).show();
         });
-
     }
 
     private void addProduct() {
@@ -116,6 +120,7 @@ public class AddProductFragment extends Fragment {
         productPrice = view.findViewById(R.id.productPriceNumberField);
         productCategory = view.findViewById(R.id.spinnerProductCategory);
         saveProduct = view.findViewById(R.id.saveProductButton);
+        viewModel = new ViewModelProvider(this).get(AddProductViewModel.class);
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getActivity(), R.array.categories, androidx.transition.R.layout.support_simple_spinner_dropdown_item);
         adapter.setDropDownViewResource(androidx.appcompat.R.layout.support_simple_spinner_dropdown_item);

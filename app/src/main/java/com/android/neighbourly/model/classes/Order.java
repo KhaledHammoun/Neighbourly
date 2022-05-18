@@ -11,17 +11,16 @@ import java.util.Objects;
 
 public class Order {
     private String id;
-    private Map<String, OrderLine> orderLines;
+    private List<OrderLine> orderLines;
     @Exclude
     private double totalPrice;
     private String orderDate;
 
     public Order() {
-        orderLines = new HashMap<String, OrderLine>() {
-        };
+        orderLines = new ArrayList<>();
     }
 
-    public Order(String id, Map<String, OrderLine> orderLines, String orderDate) {
+    public Order(String id, List<OrderLine> orderLines, String orderDate) {
         this.id = id;
         this.orderLines = orderLines;
         this.orderDate = orderDate;
@@ -35,11 +34,11 @@ public class Order {
         this.id = id;
     }
 
-    public Map<String, OrderLine> getOrderLines() {
+    public List<OrderLine> getOrderLines() {
         return orderLines;
     }
 
-    public void setOrderLines(Map<String, OrderLine> orderLines) {
+    public void setOrderLines(List<OrderLine> orderLines) {
         this.orderLines = orderLines;
     }
 
@@ -50,7 +49,7 @@ public class Order {
 
     @Exclude
     public void setTotalPrice() {
-        for (OrderLine orderLine : orderLines.values()) {
+        for (OrderLine orderLine : orderLines) {
             totalPrice += orderLine.getTotalPrice();
         }
     }
