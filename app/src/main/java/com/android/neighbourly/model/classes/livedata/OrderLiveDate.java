@@ -25,7 +25,7 @@ public class OrderLiveDate extends LiveData<List<Order>> {
             Order order = snapshot.getValue(Order.class);
             order.setId(snapshot.getKey());
             for (OrderLine ol :
-                    order.getOrderLines().values()) {
+                    order.getOrderLines()) {
                 ol.setTotalPrice();
             }
             order.setTotalPrice();
@@ -42,7 +42,7 @@ public class OrderLiveDate extends LiveData<List<Order>> {
             Order updated = snapshot.getValue(Order.class);
             updated.setId(snapshot.getKey());
             for (OrderLine ol :
-                    updated.getOrderLines().values()) {
+                    updated.getOrderLines()) {
                 ol.setTotalPrice();
             }
             updated.setTotalPrice();

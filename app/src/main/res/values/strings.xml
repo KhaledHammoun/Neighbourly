@@ -48,4 +48,12 @@
     <string name="sold_out">Sold out</string>
     <string name="your_orders">Your Orders</string>
     <string name="_title_profile">Profile</string>
+    <string name="product_description">Product description</string>
+    <string name="product_price">Product price</string>
+    <string name="product_name">Product name</string>
+    <string name="upload">upload</string>
+    <string name="save">save</string>
+    <string name="add_to_cart">Add to cart</string>
+    <string name="mobile">Phone number</string>
+    <string name="search_for_products">Search For Products</string>
 </resources>

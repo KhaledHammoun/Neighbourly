@@ -20,6 +20,11 @@
 
     </group>
     <group android:id="@+id/other">
+        <item
+            android:id="@+id/profileFragment"
+            android:icon="@drawable/selector_person"
+            android:fontFamily="@font/open_sans"
+            android:title="@string/personal_info" />
 
         <item
             android:id="@+id/settings"

@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
         appBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.navMain,
                 R.id.historicalOrders,
-                R.id.navProfile)
+                R.id.profileFragment)
                 .setOpenableLayout(drawerLayout)
                 .build();
 
@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
     private void setBottomNavigationVisibility() {
         navController.addOnDestinationChangedListener((controller, destination, arguments) -> {
             final int id = destination.getId();
-            if (id == R.id.navMain || id == R.id.historicalOrders || id == R.id.navProfile) {
+            if (id == R.id.navMain || id == R.id.historicalOrders || id == R.id.profileFragment) {
                 bottomNavigationView.setVisibility(View.VISIBLE);
             } else {
                 bottomNavigationView.setVisibility(View.GONE);

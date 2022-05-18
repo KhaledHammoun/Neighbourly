@@ -12,7 +12,7 @@
         android:title="@string/your_orders" />
 
     <item
-        android:id="@+id/navProfile"
+        android:id="@+id/profileFragment"
         android:icon="@drawable/selector_person"
         android:title="@string/_title_profile" />
 

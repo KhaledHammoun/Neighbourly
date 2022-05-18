@@ -1,26 +1,15 @@
 package com.android.neighbourly.view.models;
 
-import static androidx.activity.result.ActivityResultCallerKt.registerForActivityResult;
-import static androidx.core.app.ActivityCompat.startActivityForResult;
-
-import android.app.Application;
-import android.content.Intent;
-import android.net.Uri;
-
-import androidx.activity.result.ActivityResultLauncher;
-import androidx.activity.result.contract.ActivityResultContracts;
-import androidx.annotation.NonNull;
-import androidx.lifecycle.AndroidViewModel;
+import androidx.lifecycle.ViewModel;
 
 import com.android.neighbourly.model.classes.Product;
 import com.android.neighbourly.repositories.ProductRepository;
 
-public class AddProductViewModel extends AndroidViewModel {
+public class AddProductViewModel extends ViewModel {
 
     private ProductRepository repository;
 
-    public AddProductViewModel(@NonNull Application application) {
-        super(application);
+    public AddProductViewModel() {
         repository = ProductRepository.getInstance();
     }
 

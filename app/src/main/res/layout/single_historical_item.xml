@@ -7,7 +7,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/card_shadow"
-    android:padding="@dimen/_10sdp">
+    android:padding="@dimen/_10sdp"
+    android:layout_marginVertical="@dimen/_2sdp">
 
     <RelativeLayout
         android:id="@+id/lytItemDetail"

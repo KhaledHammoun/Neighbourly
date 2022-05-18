@@ -10,6 +10,7 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
+import android.text.method.ScrollingMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,7 +37,6 @@ public class ProductDescriptionFragment extends Fragment {
     private TextView title;
     private ImageView image;
     private TextView category;
-    private TextView provider;
     private TextView price;
     private TextView description;
     private NumberPicker quantity;
@@ -72,7 +72,6 @@ public class ProductDescriptionFragment extends Fragment {
             GlideApp.with(getActivity()).load(storageReference).into(image);
 
             title.setText(product.getName());
-            provider.setText(product.getProviderId());
             price.setText(product.getPrice() + " DKK");
             description.setText(product.getDescription());
             category.setText(product.getCategory());
@@ -90,9 +89,9 @@ public class ProductDescriptionFragment extends Fragment {
         title = view.findViewById(R.id.single_product_title);
         image = view.findViewById(R.id.single_product_image);
         category = view.findViewById(R.id.single_product_category);
-        provider = view.findViewById(R.id.single_product_provider);
         price = view.findViewById(R.id.single_product_price);
         description = view.findViewById(R.id.single_product_description);
+        description.setMovementMethod(new ScrollingMovementMethod());
         quantity = view.findViewById(R.id.number_picker);
         addToCart = view.findViewById(R.id.add_to_cart_button);
         navController = Navigation.findNavController(view);

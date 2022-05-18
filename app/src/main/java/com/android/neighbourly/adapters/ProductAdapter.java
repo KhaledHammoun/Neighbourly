@@ -44,7 +44,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         String id = products.get(position).getId();
-        StorageReference storageRef = FirebaseStorage.getInstance().getReference().child("images/products/" + id + ".jpg");
+        StorageReference storageRef = FirebaseStorage.getInstance("gs://neighbourly-9d6f1.appspot.com").getReference().child("images/products/" + id + ".jpg");
         GlideApp.with(holder.itemView).load(storageRef).into(holder.image);
         holder.productTitle.setText(products.get(position).getName());
     }

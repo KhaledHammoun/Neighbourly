@@ -26,7 +26,6 @@ public class CheckoutFragment extends Fragment {
     private NavController navController;
     private CheckoutViewModel viewModel;
     private ImageView imageView;
-    private TextView textView;
     private Button goBackButton;
 
     @Override
@@ -49,7 +48,6 @@ public class CheckoutFragment extends Fragment {
     }
 
     private void setupView() {
-        textView.setText("Thank you for your order! Your order number is ");
 
         goBackButton.setOnClickListener(view -> {
             navController.navigate(R.id.navMain);
@@ -61,7 +59,6 @@ public class CheckoutFragment extends Fragment {
         navController = Navigation.findNavController(view);
         viewModel = new ViewModelProvider(getActivity()).get(CheckoutViewModel.class);
         imageView = view.findViewById(R.id.gifImageVierw);
-        textView = view.findViewById(R.id.orderNumberTextView);
         goBackButton = view.findViewById(R.id.backToMainMenuButton);
 
         Glide.with(view).load("https://c.tenor.com/VgCDirag6VcAAAAi/party-popper-joypixels.gif").into(imageView);
